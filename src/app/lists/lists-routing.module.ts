@@ -15,6 +15,10 @@ const routes: Routes = [
   {
     path: 'sage-savas-list',
     loadChildren: () => import('./sage-savas-list/sage-savas-list.module').then( m => m.SageSavasListPageModule)
+  },
+  {
+    path: 'huge-info-list',
+    loadChildren: () => import('./huge-info-list/huge-info-list.module').then( m => m.HugeInfoListPageModule)
   }
 ];
 

@@ -24,9 +24,10 @@ ion-content{
                 @include text(14px, darken($color-white, 10));
                 margin-top: 5px;
                 padding-left: 10px;
+                position: relative;
             }
             @for $i from 1 to 6 {
-                &:nth-child(#{$i}){
+                &:nth-child(#{$i}n){
                     background: nth($list: $colors, $n: $i);
                     ion-icon{
                         color: darken(nth($list: $colors, $n: $i), 7);

@@ -84,8 +84,10 @@ ion-content{
             .eachInfo{
                 display: flex;
                 background: $theam;
-                padding: 3px 10px;
+                padding: 3px 10px 3px 3px;
                 margin-top: 5px;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
                 ion-icon{
                     background: $color-white;
                     padding: 5px;
