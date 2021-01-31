@@ -19,6 +19,14 @@ const routes: Routes = [
   {
     path: 'huge-info-list',
     loadChildren: () => import('./huge-info-list/huge-info-list.module').then( m => m.HugeInfoListPageModule)
+  },
+  {
+    path: 'hidden-buttons',
+    loadChildren: () => import('./hidden-buttons/hidden-buttons.module').then( m => m.HiddenButtonsPageModule)
+  },
+  {
+    path: 'profile-list',
+    loadChildren: () => import('./profile-list/profile-list.module').then( m => m.ProfileListPageModule)
   }
 ];
 

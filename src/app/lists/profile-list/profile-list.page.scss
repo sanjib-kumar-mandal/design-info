@@ -1,0 +1,13 @@
+ion-content{
+    @import '../../../styles.scss';
+    ion-item{
+        ion-avatar{
+            margin-right: 10px;
+        }
+        ion-label{
+            h2{
+                @include text(16px);
+            }
+        }
+    }
+}
