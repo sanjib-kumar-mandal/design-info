@@ -1,0 +1,55 @@
+ion-content{
+    @import '../../../styles.scss';
+    .allLists{
+        $colors: $color-sky, $color-blue, $color-red, $color-accent;
+        .eachList{
+            display: flex;
+            margin-top: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid darken($color-white, 20);
+            ion-icon{
+                font-size: 20px;
+                color: $color-sky;
+                padding: 10px;
+                margin-right: 10px;
+            }
+            .listAbout{
+                width: calc(100% - 110px);
+                h4{
+                    @include text(16px, $color-black, $wt: bold);
+                }
+                p{
+                    @include text(14px, $color-gibs, $wt: bold);
+                }
+            }
+            .note{
+                width: 70px;
+                position: relative;
+                p{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    min-width: 60px;
+                    text-align: center;
+                    transform: translate(-50%, -50%);
+                    padding: 3px 5px;
+                    border-radius: 10px;
+                    word-break: keep-all;
+                    @include text(12px, $color-white);
+                }
+            }
+            @for $i from 1 to 4 {
+                &:nth-child(#{$i}n){
+                    ion-icon{
+                        color: nth($colors, $i);
+                    }
+                    .note{
+                        p{
+                            background: nth($list: $colors, $n: $i);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
