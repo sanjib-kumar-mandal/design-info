@@ -1,0 +1,56 @@
+ion-content{
+    @import '../../../styles.scss';
+    .card{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .card_body{
+            width: 340px;
+            padding: 10px;
+            background: #607d8b;
+            background-image: url('../../../assets/map.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-blend-mode: multiply;
+            border-radius: 10px;
+            .top{
+                display: flex;
+                img{
+                    width: 50px;
+                }
+                h2{
+                    width: calc(100% - 50px);
+                    text-align: right;
+                    @include text(24px, $color-white, $tr: uppercase, $font: $font-crazy);
+                }
+            }
+            .middle{
+                @include text(20px, $color-white, bold, $spc: .07em,$font: $font-crazy, $tr: uppercase);
+                padding: 20px 0;
+            }
+            .title{
+                @include text(14px, $color-white, $tr: uppercase);
+                padding-bottom: 8px;
+            }
+            .bottom{
+                display: flex;
+                h4{
+                    @include text(16px, $color-white, bold, $tr: uppercase);
+                    width: calc(100% - 100px);
+                }
+                p{
+                    width: 100px;
+                    display: flex;
+                    @include text(16px, $color-white, $tr: uppercase);
+                    span{
+                        &:nth-child(1){
+                            font-size: 11px;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
