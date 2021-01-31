@@ -1,0 +1,77 @@
+@import '../../../styles.scss';
+$theam: $color-red;
+ion-content{
+    .allcards{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        grid-gap: 10px;
+        padding: 10px;
+        .eachCard{
+            box-shadow: 0 0 7px 4px rgba(0,0,0,.25);
+            padding: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+            .top{
+                display: flex;
+                img{
+                    @include avatar(2, $theam);
+                    margin-right: 10px;
+                }
+                div{
+                    width: calc(100% - 45px);
+                    h1{
+                        @include text(16px, $wt: bold);
+                        @include limitLines;
+                        margin-top: 3px;
+                    }
+                    p{
+                        @include text(14px, $color-gibs);
+                        margin-top: 5px;
+                    }
+                }
+                ion-icon[name="arrow-up"]{
+                    color: $color-green;
+                }
+                
+                ion-icon[name="arrow-down"]{
+                    color: $color-red;
+                }
+            }
+            .content{
+                @include text(16px, $color-gibs);
+                padding: 10px 0;
+            }
+            .bottom{
+                display: flex;
+                div{
+                    display: flex;
+                    color: $theam;
+                    margin-right: 10px;
+                    ion-icon{
+                        margin-right: 5px;
+                        padding: 3px;
+                        background: lighten($color-gibs, 45);
+                        border-radius: 50%;
+                    }
+                    p{
+                        @include text(14px, $theam);
+                        margin-top: 3px;
+                    }
+                }
+            }
+            .buttons{
+                margin-top: 10px;
+                margin-left: -10px;
+                margin-right: -10px;
+                // margin-bottom: -10px;
+                ion-button{
+                    background: $theam;
+                    --color: #ffffff;
+                }
+                :host(.button-clear.ion-color) .button-native{
+                    color: $color-white !important;
+                }
+            }
+        }
+    }
+}

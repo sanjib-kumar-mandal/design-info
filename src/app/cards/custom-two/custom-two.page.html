@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button routerLink="/cards" routerDirection="backword">
+        <ion-icon name="chevron-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Google Card</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="allCards">
+    <div class="eachCard">
+      <p class="logo"><ion-icon name="logo-dropbox"></ion-icon></p>
+      <div class="buttons">
+        <ion-icon name="folder"></ion-icon>
+        <ion-icon name="flask"></ion-icon>
+        <ion-icon name="file-tray"></ion-icon>
+      </div>
+      <h2>Dropbox</h2>
+      <div class="progress" data-max="1100KB"><div [ngStyle]="{'width': '20%'}"></div></div>
+    </div>
+  </div>
+</ion-content>

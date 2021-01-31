@@ -1,0 +1,311 @@
+@use "sass:math";
+ion-content{
+    @import '../../styles.scss';
+    h1{
+        @include text;
+        padding: 10px;
+    }
+    .crampOne{
+        // define colors
+        $dot-color: $color-white;
+        $background-color: $color-red;
+        $text-color: var(--ion-color-primary-contrast);
+        // start design
+        display: flex;
+        p{
+            background: $background-color;
+            padding: 5px 10px 5px 30px;
+            @include text($clr: $text-color);
+            position: relative;
+            &::after{
+                content: '';
+                width: 10px;
+                height: 10px;
+                background: $dot-color;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                left: 10px;
+                transform: translate(0, -50%);
+            }
+            &:last-child{
+                background: darken($background-color, 20);
+                border-top-right-radius: 15px;
+                border-bottom-right-radius: 15px;
+            }
+        }
+    }
+    .crampTwo{
+        // define colors
+        $theam: $color-pink;
+        $background-color: $color-white;
+        // start design
+        padding-left: 3px;
+        p {
+            display: inline-block;
+            position: relative;
+            span {
+                display: inline-block;
+                position: relative;
+                padding: 0 15px;
+                @include text($clr: $theam);
+                text-decoration: none;
+            }
+            &:last-child {
+                a {cursor: default;}
+                
+                &::before,
+                &::after {
+                    background: $background-color;
+                }
+            }        
+            &::before,
+            &::after{
+                content: '';
+                position: absolute;
+                left: 0;
+                height: 50%;
+                width: 100%;
+                background: $background-color;
+                border-left: 2px solid $theam;
+                border-right: 2px solid $theam;
+                z-index: -2;
+            }
+            &::before {
+                top: -2px;
+                transform: skew(30deg);
+                border-top: 2px solid $theam;
+            }
+            &::after {
+                bottom: -2px;
+                transform: skew(-30deg);
+                border-bottom: 2px solid $theam;
+            }
+        }
+    }
+    .crampThree{
+        // colors define
+        $theme: $color-accent;
+        $text-color: #fff;
+        $height: 30px;
+        // design
+        text-align: center;
+        display: inline-block;
+        overflow: hidden;
+        counter-reset: flag;
+        p {
+            display: block;
+            float: left;
+            line-height: $height;
+            padding: 0 3px 0 50px;
+            position: relative;
+            @include text(12px, $text-color);
+            background: lighten($theme, 10);
+            &:first-child {
+                padding-left: 30px;
+                &::before {
+                    left: 5px;
+                }
+            }
+            &:last-child {
+                padding-right: 20px;
+                color: $text-color;
+                background: $theme;
+                &::before {
+                    color: $theme;
+                }
+                &::after {
+                    content: none;
+                    background: $theme;
+                }
+            }
+            &::before {
+                content: counter(flag);
+                counter-increment: flag;
+                border-radius: 100%;
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                margin: 5px 0;
+                position: absolute;
+                top: 0;
+                left: 25px;
+                font-weight: bold;
+                color: $theme;
+                background: $text-color;
+                box-shadow: 0 0 0 1px $theme;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: -16px;
+                width: $height;
+                height: $height;
+                transform: scale(0.707) rotate(45deg);
+                z-index: 1;
+                border-radius: 0 5px 0 50px;
+                background: lighten($theme, 10);
+                transition: background 0.5s;
+                box-shadow: 2px -2px 0 2px $text-color;
+            }
+        }
+    }
+    .crampFour{
+        // color define
+        $theame: $color-blue;
+        $text-color: #ffffff;
+        $height: 30px;
+        // design 
+        display: inline-block;            
+        p{
+            float:left;
+            color: $text-color;
+            display:block;
+            background: $theame;
+            text-decoration: none;
+            position:relative;
+            height: $height;
+            line-height:$height;
+            padding: 0 10px 0 5px;
+            text-align: center;
+            margin-right: 23px;
+            ion-icon{
+                font-size: 14px;
+                margin-top: 7px;
+            }
+            &:before,
+            &:after{
+                content: "";
+                position:absolute;
+                top: 0;
+                border:0 solid $theame;
+                border-width: devide($height, 2) 10px;
+                width: 0;
+                height: 0;
+            }
+            &:before{
+                left:-20px;
+                border-left-color: transparent;
+            }
+            &:after{
+                left:100%;
+                border-color: transparent;
+                border-left-color: $theame;
+            }
+            &:first-child{
+                padding-left:10px;
+                @include border-radius(4px 0 0 4px);
+                &:before{
+                    border:none;
+                }
+            }
+            &:last-child{
+                padding-right:10px;
+                @include border-radius(0 4px 4px 0);
+                background-color: darken($theame, 20);
+                &:before{
+                    border-color: darken($theame, 20);
+                    border-left-color:transparent;
+                }
+                &:after{
+                    border:none;
+                    border-left-color: darken($theame, 20);
+                }
+            }
+        }
+    }
+    .crampFive{
+        // color define
+        $theme: $color-green;
+        $text-color: $color-white;
+        // design
+        display: -webkit-box;
+        overflow-x: scroll;
+        ion-icon{
+            width: 20px;
+            height: 20px;
+            border: 5px solid $color-white;
+            background: $theme;
+            border-radius: 50%;
+            padding: 12px;
+            color: $text-color;
+            margin-right: -10px;
+        }
+        div{
+            display: flex;
+            p{
+                @include text(15px, $text-color);
+                margin: 18px 0;
+                padding: 0 15px;
+                line-height: 32px;
+                &:last-child{
+                    border-top-right-radius: 20px;
+                    border-bottom-right-radius: 20px;
+                }
+                @for $i from 1 to 10 {
+                    &:nth-child(#{$i}){
+                        background: darken($theme, multiply($i, 1.5));
+                    }
+                }
+            }
+        }
+        &::-webkit-scrollbar{
+            display: none;
+        }
+    }
+    .crampSix{
+        // define colors
+        $theam: $color-garyish;
+        // design start
+        display: -webkit-box;
+        overflow-x: scroll;
+        p{
+            @include text(14px, $theam, bold);
+            padding: 0 10px 0 20px;
+            position: relative;
+            &::after{
+                content: '';
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                left: 4px;
+                transform: translate(0, -50%);
+            }
+            @for $i from 1 to 10 {
+                &:nth-child(#{$i}){
+                    color: darken($theam, multiply($i, 5));
+                    &::after{
+                        border: 2px solid darken($theam, multiply($i, 5));
+                        background: darken($theam, multiply($i, 5));
+                    }
+                }
+            }
+            &:last-child{
+                &::after{
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+    .crampSeven{
+        // colors define
+        $theam: $color-blue;
+        // design
+        display: flex;
+        p{
+            @include text(14px, $theam, bold);
+            padding: 0 20px 0 0;
+            position: relative;
+            &::after{
+                content: '/';
+                position: absolute;
+                top: 50%;
+                right: 10px;
+                transform: translate(0, -50%);
+            }
+        }
+    }
+}

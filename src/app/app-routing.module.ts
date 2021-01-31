@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'bread-cramps',
+    loadChildren: () => import('./bread-cramps/bread-cramps.module').then( m => m.BreadCrampsPageModule)
+  },
+  {
+    path: 'lists',
+    loadChildren: () => import('./lists/lists.module').then( m => m.ListsPageModule)
+  },
+  {
+    path: 'cards',
+    loadChildren: () => import('./cards/cards.module').then( m => m.CardsPageModule)
+  },
 ];
 
 @NgModule({

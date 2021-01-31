@@ -1,0 +1,84 @@
+ion-content{
+    @import '../../../styles.scss';
+    $theam: $color-blue;
+    .allCards{
+        padding: 10px;
+        display: -webkit-box;
+        overflow-x: scroll;
+        .eachCard{
+            width: 85%;
+            padding: 35px 15px;
+            margin-top: 15px;
+            margin-right: 15px;
+            border-radius: 10px;
+            background: $theam;
+            position: relative;
+            .logo{
+                position: absolute;
+                top: -20px;
+                left: 20px;
+                width: 50px;
+                height: 50px;
+                background: $color-white;
+                text-align: center;
+                border-radius: 50%;
+                box-shadow: 0 3px 7px 3px rgba(0,0,0,.25);
+                ion-icon{
+                    font-size: 25px;
+                    color: $theam;
+                    margin-top: 15px;
+                }
+            }
+            .buttons{
+                padding-top: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                ion-icon{
+                    padding: 15px;
+                    border-radius: 10px;
+                    color: $color-white;
+                    background: darken($theam, 10);
+                    margin-right: 15px;
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                }
+            }
+            h2{
+                @include text(20px, $color-white);
+                margin-top: 25px;
+            }
+            .progress{
+                margin-top: 25px;
+                height: 7px;
+                border-radius: 7px;
+                background: $color-white;
+                transition: .5s;
+                position: relative;
+                div{
+                    height: 100%;
+                    background: $color-red;
+                    border-radius: 7px;
+                }
+                &::after{
+                    content: '0';
+                    position: absolute;
+                    top: -20px;
+                    left: 0;
+                    @include text(14px, $color-white);
+                }
+                &::before{
+                    content: attr(data-max);
+                    position: absolute;
+                    top: -20px;
+                    right: 0;
+                    @include text(14px, $color-white);
+                }
+            }
+        }
+        &::-webkit-scrollbar{
+            display: none;
+        }
+    }
+}

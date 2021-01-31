@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button routerLink="/cards" routerDirection="backword">
+        <ion-icon name="chevron-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Native Card</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<!-- Type One -->
+<ion-card class="cardOne">
+  <ion-item>
+    <ion-avatar slot="start">
+      <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" />
+    </ion-avatar>
+    <div class="titles">
+      <ion-title>Sanjib Kumar Mandal</ion-title>
+      <p>22 May, 2020</p>
+    </div>
+    <ion-button fill="solid" color="dark" slot="end">close</ion-button>
+    <ion-button fill="clear" color="dark" slot="end"><ion-icon name="arrow-up" slot="icon-only" ></ion-icon></ion-button>
+  </ion-item>
+  <ion-card-content>
+    I would approach this a bit differently. There aren't any advantages to loading your styles in your Template like this, since Meteor does not currently support code-splitting. I would instead recommend that you keep your styles separate from your Templates, then have each one of your Templates wrapped in a top level class selector, that can be used to control the styles for each specific Template.
+  </ion-card-content>
+  <ion-row class="ion-margin-top">
+    <ion-col size="5">
+      <ion-button fill="clear" color="dark"><ion-icon name="chatbubble-ellipses" slot="start"></ion-icon> 12 Comments</ion-button>
+    </ion-col>
+    <ion-col size="4">
+      <ion-button fill="clear" color="dark"><ion-icon name="thumbs-up" slot="start"></ion-icon> 12 Likes</ion-button>
+    </ion-col>
+    <ion-col size="3">
+      <ion-button fill="clear" color="dark"> 11 hr ago</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-card>
+</ion-content>
