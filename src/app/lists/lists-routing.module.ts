@@ -27,6 +27,10 @@ const routes: Routes = [
   {
     path: 'profile-list',
     loadChildren: () => import('./profile-list/profile-list.module').then( m => m.ProfileListPageModule)
+  },
+  {
+    path: 'swiggylist',
+    loadChildren: () => import('./swiggylist/swiggylist.module').then( m => m.SwiggylistPageModule)
   }
 ];
 

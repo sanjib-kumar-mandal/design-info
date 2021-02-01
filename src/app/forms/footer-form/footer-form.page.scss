@@ -1,0 +1,13 @@
+ion-content{
+    @import '../../../styles.scss';
+    padding: 10px;
+    h1{
+        @include text(20px, $wt: bold);
+    }
+    ion-item{
+        --padding-start: 0;
+        ion-button{
+            margin-top: 10px;
+        }
+    }
+}

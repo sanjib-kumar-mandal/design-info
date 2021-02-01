@@ -1,0 +1,72 @@
+ion-content{
+    @import '../../../styles.scss';
+    .lists{
+        .eachList{
+            padding: 10px;
+            border-bottom: 1px solid darken($color-white, 15);
+            display: flex;
+            .veg{
+                width: 20px;
+                margin-right: 7px;
+                span{
+                    width: 16px;
+                    height: 16px;
+                    display: inline-block;
+                    position: relative;
+                    border: 1px solid $color-green;
+                    margin-top: 2px;
+                    &::after{
+                        content: '';
+                        width: 10px;
+                        height: 10px;
+                        background: $color-green;
+                        border-radius: 50%;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+            .info{
+                width: calc(100% - 130px);
+                h4{
+                    @include text($wt: bold);
+                    @include limitLines(2);
+                }
+                p{
+                    @include text(12px, $color-gibs);
+                    margin-top: 2px;
+                }
+            }
+            .couter{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: 10px;
+                div{
+                    display: flex;
+                    padding: 2px 5px;
+                    border: 1px solid $color-green;
+                    @include text($clr: $color-green, $wt: bold);
+                    text-align: center;
+                    span{
+                        width: 15px;
+                        font-weight: bold;
+                        line-height: 15px;
+                    }
+                    p{
+                        width: 30px;
+                    }
+                }
+            }
+            .price{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include text;
+                margin-left: 10px;
+            }
+        }
+    }
+}
