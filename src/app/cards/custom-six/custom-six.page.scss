@@ -1,0 +1,82 @@
+ion-content{
+    @import '../../../styles.scss';
+    .allCards{
+        .eachCard{
+            padding: 10px;
+            border-bottom: 1px solid darken($color-white, 16);
+            .topSide{
+                display: flex;
+                h1{
+                    width: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    span{
+                        @include text(16px, $color-black, bold);
+                        width: 45px;
+                        background: darken($color-white, 16);
+                        text-align: center;
+                        padding: 13px 0;
+                        border-radius: 50%;
+                    }
+                }
+                .tbl{
+                    width: calc(100% - 50px);
+                    .head{
+                        display: flex;
+                        p{
+                            width: 25%;
+                            text-align: center;
+                            @include text(12px, $color-gibs);
+                        }
+                    }
+                    .body{
+                        display: flex;
+                        p{
+                            width: 25%;
+                            text-align: center;
+                            @include text(14px, $color-black, bold);
+                            margin-top: 2px;
+                            &:last-child{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                ion-icon{
+                                    margin-right: 5px;
+                                }
+                                ion-icon[name="arrow-up"]{
+                                    color: $color-green;
+                                }
+                                ion-icon[name="arrow-down"]{
+                                    color: $color-red;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .bottomSide{
+                display: flex;
+                margin-top: 10px;
+                div{
+                    width: 50%;
+                    display: flex;
+                    p{
+                        @include text;
+                        text-align: center;
+                        &:nth-child(1){
+                            width: 60%;
+                            font-size: 12px;
+                            color: $color-gibs;
+                        }
+                        &:nth-child(2){
+                            width: 40%;
+                            color: $color-black;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

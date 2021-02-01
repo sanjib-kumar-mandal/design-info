@@ -1,0 +1,27 @@
+ion-content{
+    @import '../../../styles.scss';
+    // theame colors lists
+    $colors: $color-accent, $color-blue, $color-gibs, $color-green, $color-pink, $color-red, $color-sky;
+    // design
+    .gridList{
+        padding: 10px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        grid-gap: 5px;
+        .eachLists{
+            padding: 10px;
+            text-align: center;
+            background: darken($color-white, 10);
+            border: 2px solid darken($color-white, 25);
+            border-radius: 5px;
+            img{
+                height: 50px;
+            }
+            p{
+                margin-top: 3px;
+                @include text(12px, $wt: bold);
+                @include limitLines(2);
+            }
+        }
+    }
+}

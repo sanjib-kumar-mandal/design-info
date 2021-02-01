@@ -31,6 +31,10 @@ const routes: Routes = [
   {
     path: 'swiggylist',
     loadChildren: () => import('./swiggylist/swiggylist.module').then( m => m.SwiggylistPageModule)
+  },
+  {
+    path: 'icon-list',
+    loadChildren: () => import('./icon-list/icon-list.module').then( m => m.IconListPageModule)
   }
 ];
 

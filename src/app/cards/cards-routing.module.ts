@@ -31,6 +31,10 @@ const routes: Routes = [
   {
     path: 'custom-five',
     loadChildren: () => import('./custom-five/custom-five.module').then( m => m.CustomFivePageModule)
+  },
+  {
+    path: 'custom-six',
+    loadChildren: () => import('./custom-six/custom-six.module').then( m => m.CustomSixPageModule)
   }
 ];
 
