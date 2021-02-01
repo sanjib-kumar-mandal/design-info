@@ -35,6 +35,14 @@ const routes: Routes = [
   {
     path: 'icon-list',
     loadChildren: () => import('./icon-list/icon-list.module').then( m => m.IconListPageModule)
+  },
+  {
+    path: 'markup-list',
+    loadChildren: () => import('./markup-list/markup-list.module').then( m => m.MarkupListPageModule)
+  },
+  {
+    path: 'action-list',
+    loadChildren: () => import('./action-list/action-list.module').then( m => m.ActionListPageModule)
   }
 ];
 

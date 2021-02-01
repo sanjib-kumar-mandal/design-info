@@ -1,0 +1,43 @@
+ion-content{
+    @import '../../../styles.scss';
+    .allLists{ 
+        margin-top: 10px;
+        .eachList{
+            display: flex;
+            border-bottom: 1px solid darken($color-white, 10);
+            margin-bottom: 5px;
+            .body{
+                padding: 5px;
+                width: calc(100% - 100px);
+                background: darken($color-white, 5);
+                h2{
+                    @include text(16px, $wt: bold);
+                }
+                p{
+                    @include text(14px, $color-gibs);
+                }
+            }
+            .btns{
+                display: flex;
+                width: 120px;
+                div{
+                    height: 100%;
+                    width: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    p{
+                        @include text(12px, $color-white);
+                        text-align: center;
+                        span{
+                            display: block;
+                        }
+                    }
+                    &:nth-child(1){background: $color-red;}
+                    &:nth-child(2){background: $color-blue;}
+                    &:nth-child(3){background: $color-sky;}
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+ion-content{
+    @import '../../../styles.scss';
+    $theam: $color-sky;
+    $text-color: $color-black;
+    $active-text-color: white;
+    .allLists{  
+        height: auto;
+        overflow: hidden;
+        display: flex;
+        .leftSide{
+            width: 50%;
+            height: 100%;
+            overflow-y: scroll;
+            p{
+                @include text(14px, $text-color, bold, $tr: uppercase);
+                padding: 10px;
+                background: darken($color-white, 10);
+                margin-bottom: 5px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+            .active{
+                background: $theam;
+                color: $active-text-color;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+            }
+            &::-webkit-scrollbar{
+                display: none;
+            }
+        }
+        .rightSide{
+            width: 50%;
+            background: $theam;
+            padding: 10px;
+            div{
+                p{
+                    padding: 5px;
+                    @include text(12px, $active-text-color);
+                    background: darken($theam, 10px);
+                    margin-bottom: 5px;
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
