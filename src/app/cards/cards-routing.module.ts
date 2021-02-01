@@ -35,6 +35,10 @@ const routes: Routes = [
   {
     path: 'custom-six',
     loadChildren: () => import('./custom-six/custom-six.module').then( m => m.CustomSixPageModule)
+  },
+  {
+    path: 'desert-card',
+    loadChildren: () => import('./desert-card/desert-card.module').then( m => m.DesertCardPageModule)
   }
 ];
 
