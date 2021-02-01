@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'cards',
     loadChildren: () => import('./cards/cards.module').then( m => m.CardsPageModule)
   },
+  {
+    path: 'switch',
+    loadChildren: () => import('./switch/switch.module').then( m => m.SwitchPageModule)
+  },
 ];
 
 @NgModule({

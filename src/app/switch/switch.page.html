@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button routerLink="/home" routerDirection="root">
+        <ion-icon name="chevron-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Switches</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Native</ion-label>
+    <ion-toggle></ion-toggle>
+  </ion-item>
+  <!--Type One-->
+  <div class="switchOne">
+    <p>Rounded</p>
+    <div><label><input type="checkbox" /><span></span></label></div>
+  </div>
+  <!--Type Two-->
+  <div class="switchTwo">
+    <p>Squared</p>
+    <div><label><input type="checkbox" /><span></span></label></div>
+  </div>
+  <!--Type Three-->
+  <div class="switchThree">
+    <p>Specific</p>
+    <div><label><input type="checkbox" /><span data-on="ON" data-off="OFF"></span></label></div>
+  </div>
+  <!--Type Four-->
+  <div class="switchFour">
+    <p>Triggered</p>
+    <div><label><input type="checkbox" /><span data-on="ON" data-off="OFF"></span></label></div>
+  </div>
+</ion-content>

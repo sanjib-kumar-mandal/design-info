@@ -1,0 +1,192 @@
+ion-content{
+    @import '../../styles.scss';
+    ion-toggle{
+        padding: 12px;
+    }
+    // Type one
+    .switchOne{
+        display: flex;
+        padding: 10px;
+        border-bottom: 1px solid darkrn($color-white, 10);
+        p{
+            width: calc(100% - 40px);
+            @include text(16px);
+        }
+        div{
+            width: 40px;
+            input{
+                display: none;
+            }
+            span{
+                width: 100%;
+                height: 21px;
+                border-radius: 15px;
+                background: lighten($color-gibs, 20);
+                display: inline-block;
+                transition: .5s;
+                position: relative;
+                &::after{
+                    content: '';
+                    width: 17px;
+                    height: 17px;
+                    background: $color-white;
+                    border-radius: 50%;
+                    transition: .5s;
+                    position: absolute;
+                    top: 2px;
+                    left: 2px;
+                }
+            }
+            input:checked+span{
+                background: $color-blue;
+                &::after{
+                    transform: translateX(19px);
+                }
+            }
+        }
+    }
+    // Type Two
+    .switchTwo{
+        display: flex;
+        padding: 10px;
+        border-bottom: 1px solid darkrn($color-white, 10);
+        p{
+            width: calc(100% - 40px);
+            @include text(16px);
+        }
+        div{
+            width: 40px;
+            input{
+                display: none;
+            }
+            span{
+                width: 100%;
+                height: 21px;
+                background: lighten($color-gibs, 20);
+                display: inline-block;
+                transition: .5s;
+                position: relative;
+                &::after{
+                    content: '';
+                    width: 17px;
+                    height: 17px;
+                    background: $color-white;
+                    transition: .5s;
+                    position: absolute;
+                    top: 2px;
+                    left: 2px;
+                }
+            }
+            input:checked+span{
+                background: $color-blue;
+                &::after{
+                    transform: translateX(19px);
+                }
+            }
+        }
+    }
+    // Type Three
+    .switchThree{
+        display: flex;
+        padding: 10px;
+        border-bottom: 1px solid darkrn($color-white, 10);
+        p{
+            width: calc(100% - 50px);
+            @include text(16px);
+        }
+        div{
+            width: 50px;
+            input{
+                display: none;
+            }
+            span{
+                width: 100%;
+                height: 21px;
+                background: $color-red;
+                display: inline-block;
+                transition: .5s;
+                border-radius: 15px;
+                position: relative;
+                &::after{
+                    content: '';
+                    width: 17px;
+                    height: 17px;
+                    border-radius: 50%;
+                    background: $color-white;
+                    transition: .5s;
+                    position: absolute;
+                    top: 2px;
+                    left: 2px;
+                }
+                &::before{
+                    content: attr(data-off);
+                    @include text(11px, $color-white, $wt: bold);
+                    position: absolute;
+                    transition: .5s;
+                    top: 50%;
+                    right: 5px;
+                    transform: translate(0, -50%);
+                }
+            }
+            input:checked+span{
+                background: $color-green;
+                &::after{
+                    transform: translateX(29px);
+                }
+                &::before{
+                    content: attr(data-on);
+                    color: $color-white;
+                    right: inherit;
+                    left: 5px;
+                }
+            }
+        }
+    }
+    // type four
+    .switchFour{
+        display: flex;
+        padding: 10px;
+        border-bottom: 1px solid darkrn($color-white, 10);
+        p{
+            width: calc(100% - 50px);
+            @include text(16px);
+        }        
+        div{
+            width: 50px;
+            input{
+                display: none;
+            }
+            span{
+                width: 50px;
+                height: 3px;
+                border-radius: 5px;
+                background: $color-red;
+                transition: .5s;
+                display: inline-block;
+                position: relative;
+                &::after{
+                    content: attr(data-off);
+                    background: $color-red;
+                    text-align: center;
+                    padding: 3px 0;
+                    width: 40px;
+                    border-radius: 10px;
+                    transition: .5s;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translate(0, -50%);
+                    @include text(12px, $color-white);
+                }
+            }
+            input:checked+span{
+                background: $color-green;
+                &::after{
+                    content: attr(data-on);
+                    background: $color-green;
+                    transform: translate(0, -50%) translateX(11px);
+                }
+            }
+        }
+    }
+}

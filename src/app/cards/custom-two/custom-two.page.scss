@@ -1,6 +1,6 @@
 ion-content{
     @import '../../../styles.scss';
-    $theam: $color-blue;
+    $theam: lighten($color-blue, 5);
     .allCards{
         padding: 10px;
         display: -webkit-box;
