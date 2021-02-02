@@ -39,6 +39,10 @@ const routes: Routes = [
   {
     path: 'desert-card',
     loadChildren: () => import('./desert-card/desert-card.module').then( m => m.DesertCardPageModule)
+  },
+  {
+    path: 'free-card',
+    loadChildren: () => import('./free-card/free-card.module').then( m => m.FreeCardPageModule)
   }
 ];
 
