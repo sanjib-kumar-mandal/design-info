@@ -27,6 +27,9 @@ $color-red: #f44336;
     border: none;
     outline: none;
 }
+.clear{
+    clear: both;
+}
 // define functions
 @function devide($firstNumber, $secondNumber){
     @return ($firstNumber / $secondNumber);

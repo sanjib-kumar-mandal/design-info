@@ -15,6 +15,10 @@ const routes: Routes = [
   {
     path: 'custom-one',
     loadChildren: () => import('./custom-one/custom-one.module').then( m => m.CustomOnePageModule)
+  },
+  {
+    path: 'simple-form',
+    loadChildren: () => import('./simple-form/simple-form.module').then( m => m.SimpleFormPageModule)
   }
 ];
 

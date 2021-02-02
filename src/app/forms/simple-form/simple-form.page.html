@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button routerLink="/forms" routerDirection="root">
+        <ion-icon name="chevron-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Simple Form</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="form">
+    <div class="formBody">
+      <h1>Log In</h1>
+      <!-- Input filelds -->
+      <div class="eachField">
+        <input type="text" placeholder="User Name"/>
+        <ion-icon name="person-outline"></ion-icon>
+      </div>
+      <div class="eachField">
+        <input type="password" placeholder="Password"/>
+        <ion-icon name="key-outline"></ion-icon>
+      </div>
+      <!-- Button -->
+      <div class="btn">
+        <p>Forgot Password? </p>
+        <button><ion-icon name="arrow-forward-outline"></ion-icon></button>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+</ion-content>
