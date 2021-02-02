@@ -19,6 +19,14 @@ const routes: Routes = [
   {
     path: 'simple-form',
     loadChildren: () => import('./simple-form/simple-form.module').then( m => m.SimpleFormPageModule)
+  },
+  {
+    path: 'card-form',
+    loadChildren: () => import('./card-form/card-form.module').then( m => m.CardFormPageModule)
+  },
+  {
+    path: 'abstruct-form',
+    loadChildren: () => import('./abstruct-form/abstruct-form.module').then( m => m.AbstructFormPageModule)
   }
 ];
 

@@ -1,0 +1,32 @@
+ion-content{
+    @import '../../../styles.scss';
+    .fullBody{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .box{
+            width: 280px;
+            border-radius: 3px;
+            background: lighten($color-green, 40);
+            .eachField{
+                margin: 10px;
+                background: $color-white;
+                display: flex;
+                padding: 5px;
+                input{
+                    background: transparent;
+                    width: calc(100% - 30px);
+                    @include text;
+                    margin-right: 6px;
+                    padding: 5px;
+                }
+                ion-icon{
+                    color: $color-black;
+                    width: 30px;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+}
