@@ -27,6 +27,10 @@ const routes: Routes = [
   {
     path: 'abstruct-form',
     loadChildren: () => import('./abstruct-form/abstruct-form.module').then( m => m.AbstructFormPageModule)
+  },
+  {
+    path: 'abstruct-cards-form',
+    loadChildren: () => import('./abstruct-cards-form/abstruct-cards-form.module').then( m => m.AbstructCardsFormPageModule)
   }
 ];
 

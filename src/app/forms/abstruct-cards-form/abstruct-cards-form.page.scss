@@ -1,0 +1,67 @@
+ion-content{
+    @import '../../../styles.scss';
+    --background: var(--ion-color-primary);
+    .topSide{
+        padding: 20px 0;
+        text-align: center;
+        img{
+            width: 100px;
+            margin-bottom: 10px;
+        }
+        p{
+            @include text(16px, $color-white);
+        }
+    }
+    .card{
+        padding: 10px;
+        background: $color-white;
+        margin: 10px;
+        h1{
+            @include text(19px, $color-black, bold);
+            text-align: center;
+            padding-top: 10px; 
+        }
+        .desc{
+            @include text(19px, $color-gibs);
+            text-align: center;
+            margin: 10px 0;
+        }
+        .eachField{
+            display: flex;
+            border: 1px solid $color-black;
+            margin-top: 10px;
+            input{
+                background: transparent;
+                width: calc(100% - 30px);
+                padding: 10px;
+                @include text;
+            }
+            ion-icon{
+                width: 30px;
+                margin-top: 9px;
+            }
+        }
+        .btn{
+            text-align: center;
+            margin-top: 20px;
+            button{
+                padding: 10px 30px;
+                background: var(--ion-color-primary);
+                @include text(14px, $color-white, bold, $tr: uppercase);
+                border-radius: 20px;
+            }
+        }
+        .icons{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            ion-icon{
+                padding: 10px;
+                color: $color-white;
+                background: var(--ion-color-primary);
+                border-radius: 50%;
+                margin: 0 4px;
+            }
+        }
+    }
+}
