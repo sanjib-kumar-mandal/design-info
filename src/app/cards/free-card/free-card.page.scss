@@ -1,18 +1,19 @@
 ion-content{
     @import '../../../styles.scss';
-    $theam: $color-red;
+    $theam: $color-blue;
     .allCards{
         padding: 10px;
         .eachCard{
             padding: 10px;
             padding-bottom: 0;
+            margin-bottom: 10px;
             border-radius: 7px;
-            box-shadow: 0 0 1px 1px $theam;
+            box-shadow: 0 0 6px 1px $theam;
             overflow: hidden;
             h2{
                 @include text(15px, $color-white);
                 background: $theam;
-                padding: 5px 0;
+                padding: 7px 0;
                 text-align: center;
                 margin-top: -10px;
                 margin-left: -10px;
@@ -24,7 +25,7 @@ ion-content{
                     width: 50%;
                     h3, h4{
                         padding: 10px;
-                        @include text(20px);
+                        @include text(20px, $color-blue);
                         display: flex;
                         align-items: center;
                         justify-content: center;
@@ -42,8 +43,9 @@ ion-content{
                 }
                 h4{
                     span{
-                        font-size: 11px;
+                        font-size: 10px;
                         margin-left: 10px;
+                        color: darken($color-white, 25);
                     }
                 }
                 .leftSide{
